@@ -1,23 +1,15 @@
 package main
 
-object station {
+import Subway
 
-    dock A;
-    dock B;
-    /*
-    **
-    **
-    */
+class Station(val StationName: String) {
 
-}
+    var StationName: String = SubwayName
+    var StationID: String = createID()
 
+    def createID(){
 
+    }
 
-object dock {
-
-    /*
-    **
-    **
-    */
 
 }
