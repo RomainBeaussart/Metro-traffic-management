@@ -1,27 +1,29 @@
 package main
 
-import Station
-
-class Subway(val SubwayNumber: Int, val CurrentStation: String) {
+class Subway(val SubwayNumber: Int, val CurrentStation: Station, NameLine : String) extends Line(NameLine) {
 
     var full : Boolean = false
     var used : Boolean = false
 
     var subwayNumber : Int = SubwayNumber
-    var currentStation : String = CurrentStation
+    var currentStation : Station = CurrentStation
    
     /* Permet d'informer les autres metro que la rame est à l'arret à une station X */
-    def stationStop(){
-        // TODO Envoie de la station à la ligne de metro
+    def stationStop(): Unit ={
+        currentStation.StationBlock = true
    }
 
-   def use():Boolean {
-       this.use = true
-   }
+    def SubwayCome(): Unit ={
+      var FuturStation = NextStation(currentStation.StationName)
+      if (FuturStation.StationBlock){
+        return false
+      }
+      else {
+        currentStation = FuturStation
+        return true
+      }
+    }
 
-   def getCurrentStation():String {
-       return this.currentStation
-   }
 
    def emergencyStop() {
        //TODO retourner variable arret d'urgence avec nom de la station en cours

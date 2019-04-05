@@ -1,15 +1,11 @@
 package main
 
-import Subway
 
-class Station(val StationName: String) {
+class Station(station_name: String, NameLine : String) extends Line(NameLine) {
 
-    var StationName: String = SubwayName
-    var StationID: String = createID()
+    var StationName: String = station_name
+    var StationBlock: Boolean = false
 
-    def createID(){
-
-    }
 
 
 }

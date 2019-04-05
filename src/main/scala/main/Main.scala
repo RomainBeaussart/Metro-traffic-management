@@ -1,7 +1,6 @@
 package main
 
-import Subway
-import Station
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array
 
 object main {
 
@@ -9,6 +8,7 @@ object main {
     **
     **
     */
+
 
     def main (args: Array[String] ){
 
@@ -20,11 +20,11 @@ object main {
 
         /* --- Stations initialisation --- */
 
-        Station A = new Station()
-        Station B = new Station() 
-        Station C = new Station()
-        Station D = new Station()
-        Station E = new Station()
+        //Station A = new Station()
+        //Station B = new Station()
+        //Station C = new Station()
+        //Station D = new Station()
+        //Station E = new Station()
 
 
         /* --- Subways initialisation --- */
